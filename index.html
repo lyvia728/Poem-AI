@@ -7,24 +7,32 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <header>AI Poem generator
-
-    </header>
-
+    <div class="container">
+    <h2>AI Poem Generator
+</h2>
+<main>
 <form>
     <input type="text" 
     id="topic"
      placeholder="Enter a topic..."
      autofocus
      required
+     autocomplete="off"
+     class="instructions"
      />
-    <input type="submit" />
+    <input type="submit" class="submit-button" />
 </form>
 
+<div class="poem">
+Holy and mighty, beyond all praise, <br>
+Your light outshines the brightest days. <br>
+Alpha, Omega, beginning and end,<br>
+Eternal Father, Savior, Friend.
+
+</div>
 
 
-
-
+</main>
 <footer>
     This is coded by Lyvia and is <a href="https://github.com/lyvia728/Poem-AI " target="_blank"> open-sourced on GitHub</a> and
     hosted on
@@ -32,7 +40,7 @@
 </footer>
 
 
-
+</div>
 
 
     <script src="src/index.js"></script>
