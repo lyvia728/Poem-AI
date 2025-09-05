@@ -1,8 +1,7 @@
-function generatePoem(event) {
-    event.preventDefault();
+function displayPoem(response) {
 
-    new Typewriter("#poem", {
-        strings: "Holy and mighty, beyond all praise",
+  new Typewriter("#poem", {
+        strings: response.data.answer,
         autoStart: true,
         delay: 1,
         cursor: "",
@@ -10,6 +9,31 @@ function generatePoem(event) {
     });
 
     
+
+}
+
+
+
+
+
+
+
+function generatePoem(event) {
+    event.preventDefault();
+
+    let instructionsInput = document.querySelector("#user-instructions");
+    let apiKey = "eba2o4c7f9e18e3f1t9e2154f4dd3105";
+    let prompt = `Generate a  poem about ${instructionsInput.value}`;
+    let context = "Write a short poem in a creative way";
+    let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+    
+    console.log("Generating poem...");
+    console.log(`Prompt: ${prompt}`);
+    console.log(`Context: ${context}`);
+
+    axois.get(apiUrl).then(displayPoem);
+
+
 
 }
 
