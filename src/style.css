@@ -19,6 +19,13 @@ h2{
     line-height: 1.5;
     color: #272044;
 }
+.form-container{
+    background-color: white;
+    margin-bottom: 30px;
+    
+
+
+}
 
 header{
     margin-bottom: 30px
@@ -27,13 +34,18 @@ header{
 
 
 form{
-    padding: 30px;
-    background-color: white ;
-    box-shadow: 0 20px 60px rgba(65, 50, 100, 0.08);
-    border-radius: 10px;
     display: flex;
     margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(65, 50, 100, 0.08);
 
+}
+.hint{
+   line-height: 1.5; 
+   margin-top: 5px;
+   font-size: 12px;
+   opacity: 0.6;
 }
 
 .instructions{
